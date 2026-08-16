@@ -19,6 +19,10 @@ The top-level Map of Content — the front door to the vault. Link out to other 
 - [[_index|UT-Austin Coursework]] — 7 courses, reference notes only (full files stay in the private UT-Austin repo)
 - [[AI Brain Skills Strategy]] — Skills taxonomy, priority list, and build order; tracks which Skills exist and where
 
+## Skills (`.claude/skills/`)
+- `weekly-review-processor` — runs this vault's 4-step review (inbox → status → daily-note scan → MOC update); also in `Second-Brain-Personal`
+- `casual-human-voice` — writing style for anything drafted in this vault; also in `Second-Brain-Personal`
+
 ## Architecture docs
 - [[00-data-isolation]] — why Personal/Business/Finance are kept structurally separate
 - [[01-phase2-tool-layer]], [[02-phase3-orchestration]], [[03-phase4-marketing-content]], [[04-phase5-memory-reporting]] — future build phases, not yet started

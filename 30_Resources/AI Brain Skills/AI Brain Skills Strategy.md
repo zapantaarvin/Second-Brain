@@ -14,6 +14,8 @@ Arvin's stated need (2026-08-16): when he gives a task, the system should alread
 - ✅ **Done (2026-08-16):** proof-of-concept Skill built — `Second-Brain-Personal/.claude/skills/stock-portfolio/SKILL.md`. Original copy-paste prompt in `Stock portfolio task.md` replaced with a pointer to it.
 - ✅ **Done (2026-08-16):** `Second-Brain-Personal/.claude/skills/gmail-auto-label/SKILL.md` built, reconstructed from one observed run of the `gmail-auto-label` scheduled task. Also relocated `Email Auto Label.md` from this (public) repo to `Second-Brain-Personal` — it's personal inbox content and had been misplaced before the domain-boundary rule existed.
 - Arvin asked Perplexity to research a fuller skill taxonomy for this system (prompt drafted 2026-08-16) — results captured below.
+- ✅ **Done (2026-08-16):** `weekly-review-processor` Skill built and duplicated into **both** repos' `.claude/skills/` — operationalizes the 4-step review process already defined in `CLAUDE.md`, respects the existing "don't bulk-move/delete without asking" rule by proposing changes rather than auto-executing them.
+- ✅ **Done (2026-08-16):** `casual-human-voice` Skill built and duplicated into **both** repos' `.claude/skills/` — not in Perplexity's original list (it's cross-cutting style guidance, not a task-execution skill), added at Arvin's request. Deliberately not domain-specific, so duplicating across repos doesn't violate the isolation principle in §4 below (that principle is about data leakage, not style preferences). First draft was generic; superseded same-day by a much more specific spec Arvin wrote himself (found in `Second-Brain`'s inbox, misfiled there — relocated to `Second-Brain-Personal/20_Areas/School/Casual Human Voice - source draft.md`) covering exact vocabulary to avoid, no em dashes, sentence-rhythm rules, and a UT Austin academic-integrity boundary. The Skill files in both vaults now use that richer version, generalized slightly beyond just school/email.
 
 ---
 
@@ -45,11 +47,12 @@ Ranked by recurrence × re-explaining cost:
 |---|---|---|---|---|
 | 1 | **Stock portfolio co-pilot** | Decision-support | ✅ Built | Already run informally; screenshot-parsing + position-sizing logic is exactly what a Skill should encode |
 | 2 | **Gmail auto-labeling** | Capture/triage | ✅ Built | Already scheduled and repetitive — near-zero judgment variance, ideal first Skill + hook combo |
-| 3 | **Weekly review processor** | Capture/triage | Not built | Existing inbox→PARA habit; turns "sort my inbox" into a one-line trigger |
+| 3 | **Weekly review processor** | Capture/triage | ✅ Built | Existing inbox→PARA habit; turns "sort my inbox" into a one-line trigger |
 | 4 | **DTI/FDA compliance checklist** (e-commerce + protein bar) | Compliance/checklist | Not built | High cost of error (regulatory), stable checklist logic — textbook Skill use case |
 | 5 | **Kanban triage/status digest** | Monitoring/reporting | Not built | Recurs across all three businesses; one parameterized Skill avoids re-explaining structure each time |
 | 6 (later) | Community marketing content drafter | Drafting/content | Hold | High value but needs a stable brand-voice reference file first — build after enough real drafts exist to distill a voice guide |
 | 7 (later) | Finance-coaching-app content/logic skill | Research/analysis + drafting | Hold | Premature — product methodology still being defined; would need rewriting as it evolves |
+| — (added, not ranked) | **Casual human voice** | Cross-cutting (style) | ✅ Built | Not a task-execution skill, so it doesn't fit the recurrence-ranking above — applies to all written output in both vaults regardless of domain |
 
 ***
 
@@ -81,7 +84,7 @@ Ranked by recurrence × re-explaining cost:
 
 **Build now (first set — high recurrence, stable logic, immediate ROI):**
 1. ✅ Gmail auto-labeling — simplest, already scheduled, near-zero ambiguity; validates the workflow before investing more.
-2. Weekly review/inbox processor — reinforces the existing PARA habit, immediately reduces manual triage time.
+2. ✅ Weekly review/inbox processor — reinforces the existing PARA habit, immediately reduces manual triage time.
 3. ✅ Stock portfolio co-pilot — highest re-explaining cost today; codify the screenshot-read → position-sizing logic already done manually.
 4. DTI/FDA compliance checklist — highest cost-of-error task; pays for itself the first time it catches a labeling mistake.
 
@@ -100,6 +103,8 @@ Ranked by recurrence × re-explaining cost:
 - [x] Move this note out of 00_Inbox into the appropriate Area/Project once reviewed
 - [x] Create `.claude/skills/` folder in Finance/Personal repo (Second-Brain-Personal)
 - [x] Draft SKILL.md for Gmail auto-labeling
-- [ ] Create `.claude/skills/` folder in Business repo (Second-Brain) — not yet needed, no Business Skill built yet
-- [ ] Draft SKILL.md for weekly review processor (next up per build order)
-- [ ] Draft SKILL.md for DTI/FDA compliance checklist (business domain, after weekly review processor)
+- [x] Create `.claude/skills/` folder in Business repo (Second-Brain) — done, holds `casual-human-voice` and `weekly-review-processor`
+- [x] Draft SKILL.md for weekly review processor
+- [x] Draft SKILL.md for casual human voice (added mid-stream, not in original Perplexity plan)
+- [ ] Draft SKILL.md for DTI/FDA compliance checklist (business domain — next up per build order)
+- [ ] Test each built Skill's trigger actually fires on a natural phrase (per §3's own advice — haven't verified any of the four yet, only that the files exist)
