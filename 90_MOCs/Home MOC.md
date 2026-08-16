@@ -17,6 +17,7 @@ The top-level Map of Content — the front door to the vault. Link out to other 
 
 ## Resources
 - [[_index|UT-Austin Coursework]] — 7 courses, reference notes only (full files stay in the private UT-Austin repo)
+- [[AI Brain Skills Strategy]] — Skills taxonomy, priority list, and build order; tracks which Skills exist and where
 
 ## Architecture docs
 - [[00-data-isolation]] — why Personal/Business/Finance are kept structurally separate

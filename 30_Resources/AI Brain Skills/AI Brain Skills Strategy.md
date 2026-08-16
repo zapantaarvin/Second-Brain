@@ -1,0 +1,105 @@
+---
+type: resource
+captured: 2026-08-16
+moved_from: 00_Inbox
+---
+
+# The vault should be an "AI brain" — not just notes
+
+Arvin's stated need (2026-08-16): when he gives a task, the system should already know how to think about it and execute — not require re-explaining context every time.
+
+## Working notes
+- `CLAUDE.md` already does part of this (standing context every session), but that's passive — it informs reasoning, it doesn't package a repeatable procedure.
+- Claude Code has a first-class mechanism for exactly this: **Skills** (`.claude/skills/*.md`, invoked by name or auto-triggered by context) — package a procedure once, invoke it by name forever after, no re-explaining.
+- ✅ **Done (2026-08-16):** proof-of-concept Skill built — `Second-Brain-Personal/.claude/skills/stock-portfolio/SKILL.md`. Original copy-paste prompt in `Stock portfolio task.md` replaced with a pointer to it.
+- ✅ **Done (2026-08-16):** `Second-Brain-Personal/.claude/skills/gmail-auto-label/SKILL.md` built, reconstructed from one observed run of the `gmail-auto-label` scheduled task. Also relocated `Email Auto Label.md` from this (public) repo to `Second-Brain-Personal` — it's personal inbox content and had been misplaced before the domain-boundary rule existed.
+- Arvin asked Perplexity to research a fuller skill taxonomy for this system (prompt drafted 2026-08-16) — results captured below.
+
+---
+
+# AI Brain Skills Taxonomy & Build Plan
+> Perplexity research, captured 2026-08-16.
+
+## 1. Taxonomy of Skills for a Personal AI Brain
+
+Not every recurring task deserves a Skill. Rule of thumb: **if you're re-explaining the same context more than twice a week, it's a Skill candidate.**
+
+| Category | What it covers | Worth a Skill when... |
+|---|---|---|
+| **Capture/Triage** | Inbox processing, categorization, routing to project/area/resource | Sorting logic is stable and repeated on a schedule (weekly review, Gmail labeling) |
+| **Research/Analysis** | Multi-step investigation, data pulls, synthesis | The same analytical steps recur (stock reads, competitor scans, formulation checks) |
+| **Drafting/Content** | Generating first drafts in a consistent voice/format | You have a defined output format and brand voice worth encoding once |
+| **Monitoring/Reporting** | Scheduled or triggered status digests | Report structure is fixed and recurring (weekly digest, portfolio snapshot) |
+| **Decision-Support** | Structured recommendation with explicit criteria (position sizing, reorder decisions) | Judgment needed but the *framework* for judgment is stable and reusable |
+| **Compliance/Checklist** | Regulatory or procedural steps that must not be skipped | Missing a step has real cost (DTI/FDA labeling, food safety) — checklists reduce error, not creativity |
+
+**Ad hoc, no Skill needed:** one-off decisions, exploratory brainstorming, anything where the procedure changes every time. Packaging those wastes context budget for no reliability gain.
+
+***
+
+## 2. Highest-Value Skills for My Context, Prioritized
+
+Ranked by recurrence × re-explaining cost:
+
+| Rank | Skill | Category | Status | Why it's high-value now |
+|---|---|---|---|---|
+| 1 | **Stock portfolio co-pilot** | Decision-support | ✅ Built | Already run informally; screenshot-parsing + position-sizing logic is exactly what a Skill should encode |
+| 2 | **Gmail auto-labeling** | Capture/triage | ✅ Built | Already scheduled and repetitive — near-zero judgment variance, ideal first Skill + hook combo |
+| 3 | **Weekly review processor** | Capture/triage | Not built | Existing inbox→PARA habit; turns "sort my inbox" into a one-line trigger |
+| 4 | **DTI/FDA compliance checklist** (e-commerce + protein bar) | Compliance/checklist | Not built | High cost of error (regulatory), stable checklist logic — textbook Skill use case |
+| 5 | **Kanban triage/status digest** | Monitoring/reporting | Not built | Recurs across all three businesses; one parameterized Skill avoids re-explaining structure each time |
+| 6 (later) | Community marketing content drafter | Drafting/content | Hold | High value but needs a stable brand-voice reference file first — build after enough real drafts exist to distill a voice guide |
+| 7 (later) | Finance-coaching-app content/logic skill | Research/analysis + drafting | Hold | Premature — product methodology still being defined; would need rewriting as it evolves |
+
+***
+
+## 3. What Good Skill Design Looks Like
+
+- **Narrow scope, one job.** Split `dti-fda-labeling-check` from `shopee-listing-optimizer` rather than merging into one "e-commerce stuff" Skill.
+- **The `description` field is everything.** It's what Claude matches against a request to decide whether to load the Skill — state both *what* it does and *when* to use it, with concrete trigger phrases.
+  - Good: "Use when reviewing a new SKU or ingredient list for DTI/FDA compliance before listing or packaging."
+  - Bad: "Helps with compliance."
+- **Progressive disclosure.** Keep `SKILL.md`'s always-loaded body lean (well under 500 lines); push edge cases, templates, and reference material into companion files (`reference.md`, `examples.md`) loaded only when needed.
+- **Explicit input/output contract.** State expected input (e.g., "a brokerage screenshot or ticker + position size question") and expected output (e.g., "trend, risk flags, suggested position size, confidence level").
+- **Deterministic work goes in scripts, not prose.** Bundle a script for fixed computations (CSV parsing, labeling schema checks) rather than re-deriving logic from instructions every time.
+- **Avoid overlap.** If two Skills could both plausibly trigger on the same phrase, merge or sharply differentiate their descriptions — ambiguous triggers cause silent misfires.
+- **Test the trigger, not just the logic.** Say the natural phrase you'd use and confirm the right Skill loads; if not, fix the description, not the underlying logic.
+
+***
+
+## 4. Scoping Skills to Respect Personal / Finance / Business Isolation
+
+- **Location-based isolation is the primary control.** Skills in a repo's `.claude/skills/` only load in sessions opened against that repo/vault. Keep Business Skills in the Business repo, Personal/Finance Skills in their own repo — never in the global `~/.claude/skills/`.
+- **Scope tool permissions (`allowed-tools`) per domain.** A Kanban/e-commerce Skill should list only Business MCP tools; the stock co-pilot Skill should list only Finance MCP tools. Never grant broader tool access than the one job needs.
+- **Use Subagents for rare, deliberate cross-domain reads.** A subagent's isolated context window means the main session doesn't inherit cross-domain data by default — only a distilled result returns.
+- **Hooks/permissions enforce hard boundaries; Skills only carry contextual knowledge.** Absolute rules ("never let a Business skill open the Finance vault") belong in a permission/hook, not just a description — descriptions are guidance, not security.
+- **Naming convention makes scope obvious at a glance:** prefix by domain — `business-dti-fda-check`, `finance-portfolio-review`, `personal-weekly-review`. Prevents accidental duplicate triggers across repos.
+
+***
+
+## 5. Sensible Build Order
+
+**Build now (first set — high recurrence, stable logic, immediate ROI):**
+1. ✅ Gmail auto-labeling — simplest, already scheduled, near-zero ambiguity; validates the workflow before investing more.
+2. Weekly review/inbox processor — reinforces the existing PARA habit, immediately reduces manual triage time.
+3. ✅ Stock portfolio co-pilot — highest re-explaining cost today; codify the screenshot-read → position-sizing logic already done manually.
+4. DTI/FDA compliance checklist — highest cost-of-error task; pays for itself the first time it catches a labeling mistake.
+
+**Build next (once the first set is stable and trusted):**
+5. Kanban status digest, parameterized per business — wait until real usage reveals preferred digest format.
+
+**Hold off — premature right now:**
+- Community marketing content drafter — needs a distilled brand-voice reference file first.
+- Finance-coaching-app-specific Skills — product logic isn't stable yet; revisit once the app's methodology settles.
+
+**Guiding principle:** prove reliability on narrow, low-ambiguity tasks first, then extend into higher-judgment or less-stable domains.
+
+***
+
+## Next Actions
+- [x] Move this note out of 00_Inbox into the appropriate Area/Project once reviewed
+- [x] Create `.claude/skills/` folder in Finance/Personal repo (Second-Brain-Personal)
+- [x] Draft SKILL.md for Gmail auto-labeling
+- [ ] Create `.claude/skills/` folder in Business repo (Second-Brain) — not yet needed, no Business Skill built yet
+- [ ] Draft SKILL.md for weekly review processor (next up per build order)
+- [ ] Draft SKILL.md for DTI/FDA compliance checklist (business domain, after weekly review processor)
