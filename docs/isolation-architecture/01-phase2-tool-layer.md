@@ -1,5 +1,7 @@
 # Phase 2 — Build the Tool Layer (Kanban, E-commerce, Finance)
 
+> **Update, 2026-08-16 (Claude):** Section 1's Kanban recommendation is already superseded — Arvin has a real, custom-built Kanban app, [`kanban-business-hub`](https://github.com/zapantaarvin/kanban-business-hub) (Next.js + Supabase), actively tracking at least two businesses (see `Second-Brain/10_Projects/Kanban Business Hub.md`). Don't stand up Planka/Kanboard/Focalboard — that would be a second, redundant kanban tool. If this phase gets built for real, section 1 becomes "wrap kanban-business-hub's Supabase tables as an MCP server" instead of "deploy a new board." Sections 2–5 (E-commerce, Finance, build order, verification) are unaffected and still reflect the plan as originally written.
+
 ## Goal
 Stand up your Kanban board, e-commerce data source, and finance data source as MCP-connected tools — each isolated by domain (see `00-data-isolation.md`) — so Claude Code can query and act on them without merging their data.
 
