@@ -46,7 +46,7 @@ Live task execution happens in [[Kanban Business Hub]], not here — this vault 
 - **Board:** "6-Week Launch Plan" — 42 tasks, all seeded to Backlog
 - Task list matches the research closely: DTI registration, Shopee/Lazada/TikTok Shop seller account setup, competitor price checks, product labeling requirements
 
-The DTI registration files in the local `Zapee/` folder suggest at least that step is done in real life — worth checking the actual board in the app to see if that task has been marked complete, since seed data alone won't show it.
+**Confirmed (per Arvin, 2026-08-16): the app now shows "Zapee"** — the rename is live in the Kanban app, not just planned. The seed-file name "Tug-go Ecommerce" is now purely historical.
 
 For current task-by-task progress, check the Kanban app directly — this note won't reflect it.
 

@@ -13,17 +13,17 @@ A Next.js + TypeScript + Tailwind kanban app for managing multiple businesses �
 
 **Operating model implication:** this app is where task-by-task execution lives for Arvin's businesses. This vault (Second-Brain) holds research, knowledge, and reference material; Kanban Business Hub holds live task tracking. Don't try to rebuild task-tracking structure inside the vault — link out to the relevant business/board here instead.
 
-Confirmed tracking [[Zapee]] task-by-task — seeded in the app as "Tug-go Ecommerce" (the seed file predates the 2026-08-16 team rename to "Zapee"; the app itself may or may not have been updated to match — check next time this is open).
+Confirmed tracking [[Zapee]] task-by-task — the app now displays "Zapee" (per Arvin, 2026-08-16), matching the team's rename. The seed file (`tuggo_ecommerce_seed.sql`) still has the old name in its filename, but that's just a historical artifact now.
 
 ## Businesses currently seeded in the app (per `database/*_seed.sql`, checked 2026-08-16)
-- **"Tug-go Ecommerce"** (seed-file name) → real name is now **[[Zapee]]**
+- **Zapee** (renamed from "Tug-go Ecommerce" — confirmed live in the app, 2026-08-16) — see [[Zapee]]
 - **"Pilipinas Fuel"** (placeholder name) → this is actually **[[Protein Bar Business (FFN)|the protein bar business]]**, per Arvin — real brand not finalized yet
 
 ## Repo structure (as of import)
 `app/`, `components/`, `database/`, `lib/`, `types/`, plus its own `CLAUDE.md` and `AGENTS.md`.
 
 ## Status
-**Somewhat operational** (per Arvin, 2026-08-16) — usable, actively tracking at least two real businesses. Exact build phase against its own `CLAUDE.md` roadmap not yet confirmed. Check the repo's own `CLAUDE.md` "current phase" next time this project is worked on, and tighten this note.
+**Current build phase: Done** (per Arvin, 2026-08-16) — no longer just "somewhat operational," the phase itself is complete. Actively tracking at least two real businesses ([[Zapee]], protein bar). Which phase exactly (per the repo's own `CLAUDE.md` roadmap) isn't specified here — worth noting the phase number/name next time this is checked, in case there's a Phase N+1 still ahead.
 
 ## Links
 - Repo: https://github.com/zapantaarvin/kanban-business-hub (private)
