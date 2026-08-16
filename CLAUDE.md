@@ -8,6 +8,19 @@ Arvin's personal second brain: an Obsidian vault (human-readable knowledge store
 
 **Current phase: Phase 2 — Obsidian MCP wiring done.** No RAG pipeline or agent loop yet. Do not build those until this file says otherwise.
 
+**This repo is public** (made public by Arvin, 2026-08-16). It holds Business/Resources content only. Personal and Personal Finance content lives in the separate **private** [`Second-Brain-Personal`](https://github.com/zapantaarvin/Second-Brain-Personal) repo — see "Domain boundaries" below before adding anything that touches Arvin's personal life or finances.
+
+---
+
+## Domain boundaries — read before adding personal/sensitive content
+
+This repo went public on 2026-08-16. Before that, personal content (a dating playbook, a real budget dashboard, a stock portfolio) had already been added under the assumption of privacy. Excluding it via `.gitignore` alone was tried first and rejected as insufficient — see [`docs/isolation-architecture/00-data-isolation.md`](docs/isolation-architecture/00-data-isolation.md)'s core principle: **isolation must be enforced at the storage layer, not by prompting/diligence.** A `.gitignore` line depends on someone remembering it exists every time; a separate private repo doesn't.
+
+**The actual rule:**
+- Personal life, personal finances (income, portfolio, budget) → `Second-Brain-Personal` (private). Never write this content into a file inside this repo, even temporarily.
+- Business ventures, coursework, general knowledge/reference → this repo (public). This includes things Arvin might not want randomly public-searchable (e.g. business SOPs) but that don't rise to the personal/financial sensitivity level — his call, already made when he chose to keep this repo public.
+- If genuinely unsure which side something belongs on, ask rather than guess — see `docs/isolation-architecture/00-data-isolation.md`'s isolation-patterns table for the reasoning, and `docs/isolation-architecture/01`–`04` for the fuller planned architecture (tool layer, orchestration, marketing pipeline, cross-domain reporting — none of this is built yet, it's a plan).
+
 ---
 
 ## Tech stack (current)
@@ -37,7 +50,7 @@ Do not install or wire up anything in the "planned" list without asking first �
 40_Archive/    finished projects / inactive areas — never deleted, just inactive
 50_Daily/      daily notes; Templates/ holds the daily note template
 90_MOCs/       Maps of Content — hub notes linking related notes by topic
-docs/          architecture reference (ARCHITECTURE.md) and future detailed docs
+docs/          ARCHITECTURE.md (RAG/agent design) + isolation-architecture/ (domain-boundary plan, 5 docs)
 ```
 
 Every top-level folder has a `_readme.md` explaining its purpose — read it before adding structure the folder doesn't already have.
@@ -67,6 +80,7 @@ Every top-level folder has a `_readme.md` explaining its purpose — read it bef
 - Deleting or bulk-moving notes across folders
 - Editing `docs/ARCHITECTURE.md` in ways that change the recommended stack (fine to append notes; ask before changing a recommendation)
 - Anything involving credentials, API keys, or OAuth (Gmail, Google Drive, finance APIs)
+- Writing personal/financial content into this repo (see "Domain boundaries" above) — that goes in `Second-Brain-Personal` instead, no exceptions, don't ask "just this once"
 
 ## Prefer
 
