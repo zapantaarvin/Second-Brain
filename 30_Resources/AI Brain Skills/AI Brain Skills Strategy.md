@@ -48,10 +48,9 @@ Ranked by recurrence × re-explaining cost:
 | 1 | **Stock portfolio co-pilot** | Decision-support | ✅ Built | Already run informally; screenshot-parsing + position-sizing logic is exactly what a Skill should encode |
 | 2 | **Gmail auto-labeling** | Capture/triage | ✅ Built | Already scheduled and repetitive — near-zero judgment variance, ideal first Skill + hook combo |
 | 3 | **Weekly review processor** | Capture/triage | ✅ Built | Existing inbox→PARA habit; turns "sort my inbox" into a one-line trigger |
-| 4 | **DTI/FDA compliance checklist** (e-commerce + protein bar) | Compliance/checklist | Not built | High cost of error (regulatory), stable checklist logic — textbook Skill use case |
-| 5 | **Kanban triage/status digest** | Monitoring/reporting | Not built | Recurs across all three businesses; one parameterized Skill avoids re-explaining structure each time |
-| 6 (later) | Community marketing content drafter | Drafting/content | Hold | High value but needs a stable brand-voice reference file first — build after enough real drafts exist to distill a voice guide |
-| 7 (later) | Finance-coaching-app content/logic skill | Research/analysis + drafting | Hold | Premature — product methodology still being defined; would need rewriting as it evolves |
+| 4 | **Kanban triage/status digest** | Monitoring/reporting | Not built | Recurs across all three businesses; one parameterized Skill avoids re-explaining structure each time |
+| 5 (later) | Community marketing content drafter | Drafting/content | Hold | High value but needs a stable brand-voice reference file first — build after enough real drafts exist to distill a voice guide |
+| 6 (later) | Finance-coaching-app content/logic skill | Research/analysis + drafting | Hold | Premature — product methodology still being defined; would need rewriting as it evolves |
 | — (added, not ranked) | **Casual human voice** | Cross-cutting (style) | ✅ Built | Not a task-execution skill, so it doesn't fit the recurrence-ranking above — applies to all written output in both vaults regardless of domain |
 
 ***
@@ -86,10 +85,9 @@ Ranked by recurrence × re-explaining cost:
 1. ✅ Gmail auto-labeling — simplest, already scheduled, near-zero ambiguity; validates the workflow before investing more.
 2. ✅ Weekly review/inbox processor — reinforces the existing PARA habit, immediately reduces manual triage time.
 3. ✅ Stock portfolio co-pilot — highest re-explaining cost today; codify the screenshot-read → position-sizing logic already done manually.
-4. DTI/FDA compliance checklist — highest cost-of-error task; pays for itself the first time it catches a labeling mistake.
 
 **Build next (once the first set is stable and trusted):**
-5. Kanban status digest, parameterized per business — wait until real usage reveals preferred digest format.
+4. Kanban status digest, parameterized per business — wait until real usage reveals preferred digest format.
 
 **Hold off — premature right now:**
 - Community marketing content drafter — needs a distilled brand-voice reference file first.
@@ -106,5 +104,4 @@ Ranked by recurrence × re-explaining cost:
 - [x] Create `.claude/skills/` folder in Business repo (Second-Brain) — done, holds `casual-human-voice` and `weekly-review-processor`
 - [x] Draft SKILL.md for weekly review processor
 - [x] Draft SKILL.md for casual human voice (added mid-stream, not in original Perplexity plan)
-- [ ] Draft SKILL.md for DTI/FDA compliance checklist (business domain — next up per build order)
 - [ ] Test each built Skill's trigger actually fires on a natural phrase (per §3's own advice — haven't verified any of the four yet, only that the files exist)
