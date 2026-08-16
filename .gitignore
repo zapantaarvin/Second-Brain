@@ -1,0 +1,12 @@
+# Obsidian local config — contains plugin API keys and private keys, never commit
+.obsidian/
+
+# MCP server config — embeds the Local REST API bearer key, never commit
+.mcp.json
+
+# Personal/sensitive content — repo is public (2026-08-16), keep these local-only
+40_Archive/Dating Playbook.md
+20_Areas/Personal Finance/Finance Dashboard.md
+50_Daily/Stock portfolio task.md
+
+.DS_Store
