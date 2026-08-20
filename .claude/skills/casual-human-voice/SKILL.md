@@ -1,12 +1,14 @@
 ---
 name: casual-human-voice
-description: Use whenever Arvin asks to write, reply, draft, or help with an email, message, homework answer, project write-up, or any casual writing, and wants it in his own voice — not a generated-sounding response. Applies in both vaults; a specific business brand-voice guide overrides this where one exists.
+description: Use whenever Arvin asks to write, reply, draft, or help with an email, message, homework answer, project write-up, or any casual writing, and wants it in his own voice — not a generated-sounding response. Also covers document formatting conventions and the visual design system for any HTML/artifact output (reports, dashboards, design-canvas pages). Applies in both vaults; a specific business brand-voice guide overrides this where one exists.
 ---
 
 # Casual Human Voice
 
+> **2026-08-19: expanded from a pure writing-style skill into a full personal-identity skill** — persona traits (§ Identity) and a visual/document design system (§ Design System) added at Arvin's request, rather than building a separate duplicate skill. Both new sections are a first draft pulled from his own writing patterns and this session's conversation — treat them as editable, not settled; Arvin should correct anything that doesn't actually sound/look like him.
+
 ## Purpose
-Make any writing (emails, homework, project write-ups, exam responses, casual messages, notes) sound like Arvin actually typing it, not like a generated response. Casual, natural tone — not corporate, not robotic, not overly polished.
+Make any writing (emails, homework, project write-ups, exam responses, casual messages, notes) sound like Arvin actually typing it, not like a generated response. Casual, natural tone — not corporate, not robotic, not overly polished. Also governs how documents and visual outputs are formatted and styled, so everything produced for Arvin reads and looks like it's consistently from the same person/system.
 
 ## Trigger
 Use whenever Arvin asks to "write," "reply," "draft," or "help me with" an email, message, homework answer, project section, or exam response and wants it in his own voice.
@@ -49,5 +51,31 @@ Use whenever Arvin asks to "write," "reply," "draft," or "help me with" an email
 ## Academic integrity boundary (applies to UT Austin coursework specifically)
 This skill is for making his own writing and understanding sound natural — **not** for disguising AI-written answers as his own on graded assignments or exams, which would violate UT Austin's academic integrity policy. Use it to draft emails and casual writing freely, and to help him phrase his own ideas naturally on coursework — not to generate substantive academic content in place of his own work on graded material.
 
+## Identity — how Arvin comes across (draft, confirm/correct)
+Pulled from his actual typing patterns across sessions, not invented:
+- **Lowercase, low punctuation-fuss.** Doesn't capitalize "i," doesn't chase perfect punctuation in quick asks. Don't over-correct this into "proper" formatting when drafting *as* him.
+- **Run-on, stream-of-consciousness sentences chained with "and."** Thoughts arrive as one continuous line, not pre-outlined into separate sentences. Reflect this in casual output; keep it cleaner in anything formal (email to a professor, business correspondence).
+- **Direct and utilitarian — asks for the thing, not a preamble.** No throat-clearing ("I hope this finds you well," "I wanted to reach out regarding") unless the recipient genuinely expects formality.
+- **Pushes back with specific, well-reasoned critique, not vague dissatisfaction.** ("how is this a brain at all" backed by a concrete gap) rather than "this isn't good enough." Model this if drafting a pushback/feedback message on his behalf — give the sharp, specific version, not a hedged one.
+- **Technically fluent, comfortable with jargon when it's the right tool** (RAG, MCP, PARA, litmus test) — don't dumb down technical writing to generic-audience level unless the actual recipient needs that.
+- **Wants tradeoffs stated plainly and opinions given directly**, not surveyed. If drafting something that involves a recommendation, give one — don't hedge across three options to be safe.
+
+## Design System — document & visual formatting (draft, confirm/correct)
+Two layers: how *documents* (notes, markdown) are formatted, and how *visual outputs* (HTML reports, dashboards, design-canvas pages) look.
+
+### Document formatting
+- Consistent frontmatter on every note: `type`, and whatever else that note type already establishes as convention (see existing notes in each category for the pattern — don't invent new frontmatter fields per note).
+- Minimal headers/bullets in prose contexts (see Structure above) — reserve heavy structure (tables, numbered steps) for genuinely structured content: comparisons, sequenced procedures, SKILL.md files.
+- Tables over prose walls when comparing options or listing structured facts (this document itself, and this skill's own Trigger-Log format, are the reference examples).
+
+### Visual design (HTML artifacts, dashboards, reports)
+No confirmed brand palette exists yet — this is a **placeholder starting point**, swap for real preferences whenever Arvin has them (specific colors, a business's actual brand kit, etc.):
+- Direct, information-dense layouts over decorative ones — match the "no fluff" identity trait above. Favor clear hierarchy (one clear focal point, supporting detail secondary) over dense-but-flat data.
+- Neutral, restrained color use by default (per the `dataviz`/`artifact-design` skills' brand-neutral palette approach) rather than a loud/bright palette, until a real brand identity is defined.
+- Typography: clean, legible, minimal decorative fonts — this is a personal tool, not a marketing surface, unless the output is explicitly for a specific business's brand (which has its own guide and overrides this).
+- Any dashboard/report output should be scannable in seconds — matches the "distill, don't dump" vault convention applied to visual output instead of text.
+
+**To make this real** (not just a placeholder): Arvin should supply actual preferences — specific colors, fonts, an existing brand kit from one of his businesses, or example designs he likes — and this section gets rewritten from that, not left as an inferred default.
+
 ## Source
-Originally drafted by Arvin as a UT-Austin-school-and-email-specific spec (see `Second-Brain-Personal/20_Areas/School/Casual Human Voice - source draft.md`), generalized here to cover both vaults since the core rules aren't school-specific — only the academic integrity section is.
+Originally drafted by Arvin as a UT-Austin-school-and-email-specific spec (see `School/20_Areas/Casual Human Voice - source draft.md` in the public `Second-Brain` repo as of the 2026-08-19 reorg), generalized here to cover both vaults since the core writing rules aren't school-specific — only the academic integrity section is. The Identity and Design System sections above are new as of 2026-08-19, not part of that original source draft.
