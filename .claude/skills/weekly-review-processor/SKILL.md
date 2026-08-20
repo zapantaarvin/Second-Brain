@@ -8,20 +8,20 @@ description: Use when Arvin says "do the weekly review," "process my vault inbox
 Runs the review process this vault's own `CLAUDE.md` already defines: empty the inbox, update project status, scan daily notes for durable insights, update MOCs. This Skill exists so that process is one trigger phrase, not a re-explained checklist every time.
 
 ## Step 1 — Empty `00_Inbox`
-For each note in `00_Inbox`:
-- Propose where it goes: merge into an existing `10_Projects`/`20_Areas`/`30_Resources` note, becomes a new note of its own, or gets deleted as dead.
-- State the reasoning in one line per note — don't just silently file it.
+For each note in `00_Inbox`, this is a **two-stage decision** since the reorg to category-first folders (2026-08-19): first which category (per root `CLAUDE.md`'s category map), then which PARA bucket within it (`10_Projects`/`20_Areas`/`30_Resources`).
+- Propose the full path: category + PARA bucket, or a new note of its own, or delete as dead.
+- State the reasoning in one line per note — don't just silently file it. If the category itself is unclear, say so explicitly rather than guessing.
 - **Deleting or moving notes is in this vault's "do not touch without asking" list** (see `CLAUDE.md`) — propose the action and get a yes before executing it, don't just do it. Batch the proposals into one list rather than asking note-by-note if there are several.
 
 ## Step 2 — Update project/area status
-- Go through `10_Projects/` (and relevant `20_Areas/`) notes.
+- Go through each category's `10_Projects/` (and relevant `20_Areas/`) notes.
 - Flag anything marked "unconfirmed," unresolved, or clearly stale (compare dates in the note against today).
 - Ask Arvin directly for the current state rather than guessing or leaving it stale — this is exactly the pattern that already worked for Zapee/Kanban Business Hub status updates.
 
 ## Step 3 — Scan daily notes for durable insights
-- Look at `50_Daily/` entries since the last review.
-- Anything that's actually a durable fact/decision (not just a log line) is a candidate to get promoted into the relevant `10_Projects`/`20_Areas`/`30_Resources` note, same as how portfolio insights or Zapee/Kanban findings got written up permanently rather than left buried in a dated log.
-- Leave genuinely time-bound log entries (what happened that day) where they are.
+- Look at `50_Daily/` entries since the last review (vault-wide, not per category).
+- Anything that's actually a durable fact/decision (not just a log line) is a candidate to get promoted into the relevant category's `10_Projects`/`20_Areas`/`30_Resources` note — same two-stage decision as Step 1 — same pattern as how portfolio insights or Zapee/Kanban findings got written up permanently rather than left buried in a dated log.
+- Leave genuinely time-bound log entries (what happened that day) where they are. Note: some `50_Daily/` entries (e.g. `Stock portfolio task.md`, `Email Auto Label.md`) are deliberately dated task-logs that stay in `50_Daily/` permanently, not just until reviewed — don't promote/move those out.
 
 ## Step 4 — Update MOCs
 - Check `90_MOCs/Home MOC.md` (and any topic MOCs) link to everything new/moved from steps 1–3.

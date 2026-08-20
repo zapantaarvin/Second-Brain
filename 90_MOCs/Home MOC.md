@@ -6,22 +6,27 @@ type: moc
 
 The top-level Map of Content — the front door to the vault. Link out to other MOCs as they're created (one per major Area or long-running Project).
 
-## Areas
-- Personal Development, Personal Finance — live in the private `Second-Brain-Personal` repo, not this vault at all (see `docs/isolation-architecture/00-data-isolation.md`)
+Category-first as of 2026-08-19 — see `CLAUDE.md`'s category map for what belongs where. Personal/Finances content lives in the private `Second-Brain-Personal` repo, not this vault at all (see `docs/isolation-architecture/00-data-isolation.md`).
 
-## Active Projects
+## General
+- [[AI Brain Skills Strategy]] — Skills taxonomy, priority list, and build order; tracks which Skills exist and where
+
+## School
+- [[_index|UT-Austin Coursework]] — 7 courses, reference notes only (full files stay in the private UT-Austin repo)
+- [[Casual Human Voice - source draft]] — original UT Austin voice spec the `casual-human-voice` Skill was built from
+
+## Projects (app building)
 - [[Kanban Business Hub]]
-- [[Zapee]] — import/e-commerce
-- [[Protein Bar Business (FFN)]]
 - [[Financial Compass App]]
 
-## Resources
-- [[_index|UT-Austin Coursework]] — 7 courses, reference notes only (full files stay in the private UT-Austin repo)
-- [[AI Brain Skills Strategy]] — Skills taxonomy, priority list, and build order; tracks which Skills exist and where
+## Business
+- [[Zapee]] — import/e-commerce
+- [[Protein Bar Business (FFN)]]
 
 ## Skills (`.claude/skills/`)
 - `weekly-review-processor` — runs this vault's 4-step review (inbox → status → daily-note scan → MOC update); also in `Second-Brain-Personal`
 - `casual-human-voice` — writing style for anything drafted in this vault; also in `Second-Brain-Personal`
+- `auditing-skill-triggers` — periodically re-verifies Skill trigger reliability as the library grows; also in `Second-Brain-Personal`
 
 ## Architecture docs
 - [[00-data-isolation]] — why Personal/Business/Finance are kept structurally separate
