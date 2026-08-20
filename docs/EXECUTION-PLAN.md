@@ -9,15 +9,18 @@
 - [x] Extend `grilling` with Study Mode (concept-mastery) for School, alongside its existing Design-Tree Mode — done 2026-08-20, synced to both repos
 - [x] Build `design-token-guardian` (Second-Brain, nested under `Projects/.claude/skills/`) — done 2026-08-20, reads `frontend-design`'s tokens at check-time rather than hardcoding them
 - [x] Run `auditing-skill-triggers` against the 3 new/changed skills — done 2026-08-20, all pass, two soft ambiguities logged not fixed (low risk)
-- [x] Sync cross-cutting changes via `sync-shared-skills.sh` — confirmed `IN SYNC` for all 6 shared skills
+- [x] Sync cross-cutting changes via `sync-shared-skills.sh` — confirmed `IN SYNC` for all 8 shared skills (grown from 6 during this pass)
 - [x] Update `STATUS.md` to reflect what's now built — done 2026-08-20 (see below)
+- [x] Build `planning-before-execution` core skill (plan mode + checklist + explicit approval before executing) — done 2026-08-20
+- [x] Build `giving-actionable-instructions` core skill (Tier-2-style items always get concrete steps) — done 2026-08-20
+- [x] Merge Arvin's own Voice/Formatting/Context Handling rewrite into `casual-human-voice`, keeping Identity + Design System untouched — done 2026-08-20
 
 ## Tier 2 — needs Arvin specifically, Claude cannot do these
 
-- [ ] Open/reload `Second-Brain-Personal` in Obsidian once, so the Local REST API plugin generates its key — unblocks that vault's MCP wiring
-- [ ] Run `/plugin install skill-creator@anthropic-agent-skills` in an interactive session
-- [ ] Decide whether to push either repo to GitHub (currently local-only)
-- [ ] Actually capture something real into `00_Inbox` — the one item on this whole list that isn't infrastructure
+- [ ] **Open/reload `Second-Brain-Personal` in Obsidian, unblocks MCP wiring.** Steps: (1) open the Obsidian app, (2) if `Second-Brain-Personal` isn't already an open vault, use "Open another vault" → "Open folder as vault" → select `/Users/arvinzapanta/Documents/Brain/Second-Brain-Personal`; if it's already open, just switch to that vault window and close/reopen it once, (3) wait a few seconds for plugins to load, (4) tell me once it's open — I'll check `.obsidian/plugins/obsidian-local-rest-api/data.json` for the generated key and finish `.mcp.json` myself, no further action needed from you.
+- [ ] **Run `/plugin install skill-creator@anthropic-agent-skills`.** Steps: (1) open an interactive Claude Code session (terminal, not this one), (2) type that exact command at the prompt, (3) confirm any install prompt it shows.
+- [ ] **Decide whether to push either repo to GitHub.** Not an instruction, a decision — tell me yes/no per repo and I'll handle the actual `git push`.
+- [ ] **Capture something real into `00_Inbox`.** Steps: (1) open Obsidian on whichever vault fits (public `Second-Brain` for business/school/general, private `Second-Brain-Personal` for personal/finance), (2) create a new note anywhere inside that vault's `00_Inbox/` folder, (3) write whatever's on your mind, no formatting or categorizing needed at capture time, (4) next time you ask for a weekly review, I'll help sort it from there.
 
 ## Tier 3 — deliberately deferred, not part of this execution pass
 
