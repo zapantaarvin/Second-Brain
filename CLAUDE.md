@@ -8,6 +8,8 @@ Arvin's personal second brain: an Obsidian vault (human-readable knowledge store
 
 **Current phase: Phase 2 — Obsidian MCP wiring done.** No RAG pipeline or agent loop yet. Do not build those until this file says otherwise.
 
+**Category-first reorg (2026-08-19).** Flat PARA restructured into `General`/`School`/`Projects`/`Business` categories with PARA nested inside each — see "Folder map" below.
+
 **This repo is public** (made public by Arvin, 2026-08-16). It holds Business/Resources content only. Personal and Personal Finance content lives in the separate **private** [`Second-Brain-Personal`](https://github.com/zapantaarvin/Second-Brain-Personal) repo — see "Domain boundaries" below before adding anything that touches Arvin's personal life or finances.
 
 ---
@@ -42,18 +44,32 @@ Do not install or wire up anything in the "planned" list without asking first �
 
 ## Folder map
 
+Category-first as of 2026-08-19 — category folders are the new top level, PARA nested inside each. `00_Inbox/`, `50_Daily/`, `90_MOCs/` stay vault-wide (not per-category — see "Category map" below for why).
+
 ```
-00_Inbox/      unsorted daily capture — no filtering at capture time
-10_Projects/   things with a finish line and a deadline
-20_Areas/      ongoing responsibilities with no finish line
-30_Resources/  reference material, organized by topic
-40_Archive/    finished projects / inactive areas — never deleted, just inactive
+00_Inbox/      unsorted daily capture — no filtering at capture time, no category decision here either
+General/       {CLAUDE.md, 10_Projects, 20_Areas, 30_Resources, 40_Archive}
+School/        {CLAUDE.md, 10_Projects, 20_Areas, 30_Resources, 40_Archive}
+Projects/      {CLAUDE.md, 10_Projects, 20_Areas, 30_Resources, 40_Archive}
+Business/      {CLAUDE.md, 10_Projects, 20_Areas, 30_Resources, 40_Archive}
 50_Daily/      daily notes; Templates/ holds the daily note template
 90_MOCs/       Maps of Content — hub notes linking related notes by topic
 docs/          ARCHITECTURE.md (RAG/agent design) + isolation-architecture/ (domain-boundary plan, 5 docs)
 ```
 
-Every top-level folder has a `_readme.md` explaining its purpose — read it before adding structure the folder doesn't already have.
+Every PARA subfolder has a `_readme.md` explaining its purpose — read it before adding structure it doesn't already have.
+
+### Category map — route here before reading anything else
+A category's own `CLAUDE.md` only loads once Claude actually reads/edits a file inside it (Claude Code's nested-memory behavior) — this map exists so a new note can be routed correctly *before* that happens.
+
+| Category | What goes here |
+|---|---|
+| **General** | Cross-cutting reference that doesn't fit the other three — e.g. the Skills system itself. Used deliberately, not as a dumping ground. |
+| **School** | UT Austin coursework — course notes, assignments, academic writing. |
+| **Projects** | Apps Arvin is personally coding — has its own repo/tech stack/build-phase (Kanban Business Hub, Financial Compass App). See `Projects/CLAUDE.md` for the litmus test vs. Business. |
+| **Business** | Venture strategy/ops/reference with no dev artifact of Arvin's own (Zapee, Protein Bar Business/FFN). |
+
+If genuinely unsure which category, ask rather than guess — same principle as the public/private domain-boundary rule below.
 
 ---
 
@@ -65,9 +81,8 @@ Every top-level folder has a `_readme.md` explaining its purpose — read it bef
 - **Distill, don't dump.** When saving external material into `30_Resources`, compress it into your own words. Raw clippings defeat the point of a second brain.
 - **MOCs are earned.** Create a new MOC in `90_MOCs` once a topic has ~5+ related notes, not before.
 - **Weekly review is real work.** Empty the inbox, update project status, scan daily notes for durable insights, update MOCs. If Claude is asked to "do the weekly review," it means literally walking through these four steps.
-- **Vault ≠ task tracker.** [`kanban-business-hub`](https://github.com/zapantaarvin/kanban-business-hub) (Arvin's actual org/planning tool, confirmed 2026-08-16) is where live task-by-task execution for his businesses lives. This vault holds research, knowledge, and reference notes about those businesses — not the task boards themselves. Don't rebuild kanban/task structure in the vault; link out to the relevant `10_Projects/` note instead, and note the business's name *inside the app* if it differs from the vault note's title (e.g. [[Zapee]] was seeded as "Tug-go Ecommerce" before a 2026-08-16 rename; [[Protein Bar Business (FFN)]] is seeded as "Pilipinas Fuel," a placeholder).
-- **Cross-cutting Skills are duplicated, not shared, across the two repos.** `casual-human-voice` and `weekly-review-processor` live in both `Second-Brain/.claude/skills/` and `Second-Brain-Personal/.claude/skills/` as separate copies (they carry no domain data, so duplication doesn't violate the isolation principle — see `AI Brain Skills Strategy.md` §4). After editing either copy, run `../sync-shared-skills.sh` from `Brain/` to check for drift and optionally sync it — nothing does this automatically.
-- **Business/brand names change — check before trusting a note.** Arvin's businesses go through placeholder and rename cycles (see above). A note's title and frontmatter reflect the name known *at the time it was written* — always sanity-check against the live Kanban app or Arvin directly before treating a business name as current.
+- **Cross-cutting Skills are duplicated, not shared, across the two repos.** `casual-human-voice`, `weekly-review-processor`, and `auditing-skill-triggers` live in both `Second-Brain/.claude/skills/` and `Second-Brain-Personal/.claude/skills/` as separate copies (they carry no domain data, so duplication doesn't violate the isolation principle — see `AI Brain Skills Strategy.md` §4). After editing any of the three, run `../sync-shared-skills.sh` from `Brain/` to check for drift and optionally sync it — nothing does this automatically.
+- **Category-specific conventions live in each category's own `CLAUDE.md`**, not here — e.g. `Business/CLAUDE.md` has the "vault ≠ task tracker" and business-name-churn rules, `Projects/CLAUDE.md` has the Business-vs-Projects litmus test, `School/CLAUDE.md` has the academic-integrity boundary pointer. This file only holds what applies vault-wide.
 
 ---
 
