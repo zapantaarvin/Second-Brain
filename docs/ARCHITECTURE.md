@@ -46,6 +46,8 @@ Second-Brain/
 └── CLAUDE.md            # standing instructions for Claude Code (see §5)
 ```
 
+> **Update, 2026-08-19 (Claude):** this diagram is the original flat-PARA sketch and is now historical — the vault was restructured to category-first (`General`/`School`/`Projects`/`Business`, each nesting its own PARA + `CLAUDE.md`) per Arvin's request. `00_Inbox`/`50_Daily`/`90_MOCs` stayed vault-wide as sketched here; `10_Projects`/`20_Areas`/`30_Resources`/`40_Archive` moved inside each category folder instead. See the root `CLAUDE.md`'s category map for the current structure — not rewriting this section since it's the original recommendation, not obsolete reasoning.
+
 ### 2.3 Core Plugins
 Daily Notes, Templater, Dataview (query notes like a database), Calendar, Smart Connections (chat with your notes), Obsidian Git/Sync for backup.
 

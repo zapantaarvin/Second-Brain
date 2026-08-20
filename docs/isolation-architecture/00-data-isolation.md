@@ -27,6 +27,8 @@ Second-Brain/
 ```
 Each top-level folder gets its own PARA substructure. Nothing crosses into `Shared/` automatically — you (or an explicit agent action you approve) must move it there.
 
+> **Update, 2026-08-19 (Claude):** what actually got built diverges from this sketch in one way and converges in another. Diverges: Personal/Finance ended up in the separate **private `Second-Brain-Personal` repo**, not folders inside one vault — a stronger form of isolation than this section originally called for, decided 2026-08-16 (see this file's own §0 core principle: storage-layer isolation, not folders + prompting). Converges: on 2026-08-19, both repos were independently restructured to category-first folders with nested PARA — `Second-Brain` got `General/School/Projects/Business`, `Second-Brain-Personal` got `Personal/Finances` — which is structurally the same idea as this section's per-domain top-level folders, just split across two repos instead of one, and without a `Shared/` folder (no cross-domain reporting layer exists yet — still §5 below, not built).
+
 ### 2.2 Vector Store Namespace Separation
 - Use **separate collections/namespaces** per domain in Chroma (or separate indexes in Qdrant): `personal_vault`, `business_vault`, `finance_vault`.
 - Every embedded chunk is stamped with `domain_id` metadata at ingestion time.
