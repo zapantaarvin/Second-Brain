@@ -1,6 +1,6 @@
 ---
 name: weekly-review-processor
-description: Use when Arvin says "do the weekly review," "process my inbox," or asks for a vault review, in either Second-Brain or Second-Brain-Personal. Walks the vault's own 4-step review process (CLAUDE.md) end-to-end and reports what changed.
+description: Use when Arvin says "do the weekly review," "process my vault inbox / 00_Inbox," or asks for a vault review, in either Second-Brain or Second-Brain-Personal. This is about the Obsidian vault's inbox, not Gmail — see gmail-auto-label for that. Walks the vault's own 4-step review process (CLAUDE.md) end-to-end and reports what changed.
 ---
 
 # Weekly Review Processor

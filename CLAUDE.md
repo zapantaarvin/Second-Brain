@@ -100,7 +100,7 @@ Every top-level folder has a `_readme.md` explaining its purpose — read it bef
 5. ⬜ Reranker
 6. ⬜ Agentic RAG escalation — only for query classes where static RAG fails
 7. ⬜ Subagents/skills for recurring workflows
-8. ⬜ Memory layer (Mem0/Letta) — only if needed
+8. ⬜ Memory layer (Mem0/Letta) — only if needed. Auto-memory backfilled 2026-08-16 (Claude's own cross-session memory index, outside this repo) with current project status and standing preferences; Mem0/Letta still not evaluated, not needed yet.
 9. ⬜ Governance: tracing, verifier skill, eval set
 
 When a step here gets built, mark it ✅ and add one line on what changed. If Claude repeats the same mistake twice, that's a missing line in this file, not a reason to write a longer prompt.

@@ -15,6 +15,8 @@ Arvin's stated need (2026-08-16): when he gives a task, the system should alread
 - ✅ **Done (2026-08-16):** `Second-Brain-Personal/.claude/skills/gmail-auto-label/SKILL.md` built, reconstructed from one observed run of the `gmail-auto-label` scheduled task. Also relocated `Email Auto Label.md` from this (public) repo to `Second-Brain-Personal` — it's personal inbox content and had been misplaced before the domain-boundary rule existed.
 - Arvin asked Perplexity to research a fuller skill taxonomy for this system (prompt drafted 2026-08-16) — results captured below.
 - ✅ **Done (2026-08-16):** `weekly-review-processor` Skill built and duplicated into **both** repos' `.claude/skills/` — operationalizes the 4-step review process already defined in `CLAUDE.md`, respects the existing "don't bulk-move/delete without asking" rule by proposing changes rather than auto-executing them.
+- ✅ **Done (2026-08-19):** Deep research on scaling a Skills library past a handful of skills — sourced live from Anthropic's current docs, not training-data guesses. Key findings: a real trigger-eval methodology exists (should-trigger/should-not/ambiguous, tested in isolation *and* against the active skill set); Anthropic ships a meta-skill (`skill-creator` plugin) with a measured train/test trigger-rate loop, install via `/plugin install skill-creator@anthropic-agent-skills` — **still pending, needs an interactive session to run the `/plugin` command, Claude can't install it headlessly**; recall degrades past ~10-15 simultaneously-loaded skills per vault, which is a real argument *for* keeping the two-repo split rather than consolidating. Full report was scratch-only and not persisted; see this file's own updates below for what got acted on.
+- ✅ **Done (2026-08-19):** `auditing-skill-triggers` Skill built and duplicated into **both** repos' `.claude/skills/` (registered in `sync-shared-skills.sh`'s `SHARED_SKILLS`) — closes the "haven't verified any of the four yet" gap below by making trigger verification a repeatable, dated, logged process (`.claude/skills/_trigger-log.md` per vault) instead of a one-off check. First manual run already done as part of building it: found and fixed a real collision (`weekly-review-processor` vs `gmail-auto-label` both matching on bare "inbox" — description edited to disambiguate vault-inbox vs Gmail, in both repos); all 4 pre-existing skills pass should-trigger/should-not-trigger/ambiguous checks — see the trigger logs for detail.
 - ✅ **Done (2026-08-16):** `casual-human-voice` Skill built and duplicated into **both** repos' `.claude/skills/` — not in Perplexity's original list (it's cross-cutting style guidance, not a task-execution skill), added at Arvin's request. Deliberately not domain-specific, so duplicating across repos doesn't violate the isolation principle in §4 below (that principle is about data leakage, not style preferences). First draft was generic; superseded same-day by a much more specific spec Arvin wrote himself (found in `Second-Brain`'s inbox, misfiled there — relocated to `Second-Brain-Personal/20_Areas/School/Casual Human Voice - source draft.md`) covering exact vocabulary to avoid, no em dashes, sentence-rhythm rules, and a UT Austin academic-integrity boundary. The Skill files in both vaults now use that richer version, generalized slightly beyond just school/email.
 
 ---
@@ -52,6 +54,7 @@ Ranked by recurrence × re-explaining cost:
 | 5 (later) | Community marketing content drafter | Drafting/content | Hold | High value but needs a stable brand-voice reference file first — build after enough real drafts exist to distill a voice guide |
 | 6 (later) | Finance-coaching-app content/logic skill | Research/analysis + drafting | Hold | Premature — product methodology still being defined; would need rewriting as it evolves |
 | — (added, not ranked) | **Casual human voice** | Cross-cutting (style) | ✅ Built | Not a task-execution skill, so it doesn't fit the recurrence-ranking above — applies to all written output in both vaults regardless of domain |
+| — (added, not ranked) | **Auditing skill triggers** | Cross-cutting (meta — audits the Skills system itself) | ✅ Built | Not a task-execution skill either — periodically re-verifies the other skills' trigger reliability as the library grows, per the "recall degrades past ~10-15 skills" research finding above |
 
 ***
 
@@ -96,6 +99,11 @@ Ranked by recurrence × re-explaining cost:
 **Guiding principle:** prove reliability on narrow, low-ambiguity tasks first, then extend into higher-judgment or less-stable domains.
 
 ***
+
+## Candidates surfaced by 2026-08-19 research (not yet built, not yet ranked into §5)
+- **Monthly budget review co-pilot** (`Second-Brain-Personal`) — same proven pattern as `stock-portfolio`, applied to the numeric structure already in `Finance Dashboard.md`. Arvin passed on building this now (2026-08-19); revisit later.
+- **Zapee competitor price & reorder-decision check** (`Second-Brain`) — ties to Zapee's own blueprint's "weekly reorder rhythm." Build after Kanban status digest per the existing build order — more judgment variance than the narrow tasks proven so far.
+- **UT Austin semester deadline capture** (`Second-Brain`) — no deadline tracking exists across the 6 course notes. Arvin passed on building this now (2026-08-19); lower urgency, per-semester not weekly.
 
 ## Next Actions
 - [x] Move this note out of 00_Inbox into the appropriate Area/Project once reviewed
