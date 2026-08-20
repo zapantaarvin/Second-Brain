@@ -1,6 +1,6 @@
 ---
 name: reflecting-on-skills
-description: Use when Arvin says "reflect on [skill]", "update this skill based on how that went," or after any session where a Skill's output was corrected, approved, or clearly worked/failed. Analyzes the session for corrections/approvals/patterns and proposes a skill update with a confidence level — never edits the skill without explicit confirmation.
+description: Use when Arvin explicitly says "reflect on [skill]," "update this skill based on how that went," or gives a clear, decisive verdict on a skill's output ("I hate this," "this is exactly right," a firm keep/scrap call) — not on routine mid-session corrections like "make it shorter" or "try again." Analyzes the session for corrections/approvals/patterns and proposes a skill update with a confidence level — never edits the skill without explicit confirmation.
 ---
 
 # Reflecting on Skills
