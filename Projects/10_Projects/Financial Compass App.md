@@ -19,6 +19,9 @@ A personal finance coaching web app (single-page, client-side) built around prin
 ## Status
 In testing (per Arvin, 2026-08-16) — live page up, not yet considered finished/shipped.
 
+## Visual identity — confirmed 2026-08-20
+The Bank Statement Analyzer results screen was rebuilt as a standalone test artifact to settle the vault's default visual direction (see `Projects/.claude/skills/frontend-design/REFLECTIONS.md` for the full A/B test). Confirmed direction: warm beige/cream ground, near-black text, Urbanist-style confident sans, restrained radius, solid orange/cyan color-blocking, light-only. Not yet applied to the live app itself — the test was a mockup, not a shipped change. Worth revisiting when Compass gets its next real design pass.
+
 ## Distinction from Arvin's personal finance tracking
 Compass is a general-purpose coaching *product* (someone else could use it), distinct from Arvin's own real budget-tracking notes (kept local-only, not in this public repo). Compass is a Project (a product being built); personal budget tracking is an Area (ongoing, never "done").
 

@@ -2,7 +2,7 @@
 
 ## What this is
 
-Arvin's personal second brain: an Obsidian vault (human-readable knowledge store) paired with Claude Code as the reasoning/execution layer. The full architecture rationale — RAG pipeline design, agent patterns, memory system, sourced references — lives in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md). This file is the lean, per-session brief; read the architecture doc only when you need the "why" behind a decision below. For how the system's own maintenance mechanisms (reviews, skill audits, sync, memory) actually run and how to verify they're working, see [`docs/MAINTENANCE.md`](docs/MAINTENANCE.md).
+Arvin's personal second brain: an Obsidian vault (human-readable knowledge store) paired with Claude Code as the reasoning/execution layer. The full architecture rationale — RAG pipeline design, agent patterns, memory system, sourced references — lives in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md). This file is the lean, per-session brief; read the architecture doc only when you need the "why" behind a decision below. For how the system's own maintenance mechanisms (reviews, skill audits, sync, memory) actually run and how to verify they're working, see [`docs/MAINTENANCE.md`](docs/MAINTENANCE.md). For current build status, a full skills inventory, and an evidence-based audit of known flaws, see [`docs/STATUS.md`](docs/STATUS.md) — updated periodically, not every session.
 
 **Golden rule:** default to the simplest thing that works — a single note, a single LLM call, a deterministic workflow. Only reach for retrieval pipelines, agent loops, or multi-agent orchestration once a simpler approach has demonstrably failed. Complexity is earned, not assumed.
 
