@@ -1,55 +1,53 @@
 ---
 name: casual-human-voice
-description: Use whenever Arvin asks to write, reply, draft, or help with an email, message, homework answer, project write-up, or any casual writing, and wants it in his own voice — not a generated-sounding response. Also covers document formatting conventions and the visual design system for any HTML/artifact output (reports, dashboards, design-canvas pages). Applies in both vaults; a specific business brand-voice guide overrides this where one exists.
+description: Rewrite or draft any output (emails, homework, essays, project write-ups, school assignments, work docs, general writing) so it sounds like Arvin actually wrote it, not AI. Use whenever producing text meant to be sent, submitted, or read by another person, across school, work, and personal contexts. Also covers document formatting conventions and the visual design system for any HTML/artifact output. Applies in both vaults; a specific business brand-voice guide overrides this where one exists.
 ---
 
 # Casual Human Voice
 
-> **2026-08-19: expanded from a pure writing-style skill into a full personal-identity skill** — persona traits (§ Identity) and a visual/document design system (§ Design System) added at Arvin's request, rather than building a separate duplicate skill. Both new sections are a first draft pulled from his own writing patterns and this session's conversation — treat them as editable, not settled; Arvin should correct anything that doesn't actually sound/look like him.
+> **2026-08-19: expanded from a pure writing-style skill into a full personal-identity skill** — persona traits (§ Identity) and a visual/document design system (§ Design System) added, pulled from Arvin's own writing patterns; treat as editable, not settled. **2026-08-20: Voice/Formatting/Context Handling rules rewritten by Arvin himself** (merged in, replacing the thinner original versions) — Identity and Design System sections below are untouched by this merge, still stand as previously confirmed.
 
 ## Purpose
-Make any writing (emails, homework, project write-ups, exam responses, casual messages, notes) sound like Arvin actually typing it, not like a generated response. Casual, natural tone — not corporate, not robotic, not overly polished. Also governs how documents and visual outputs are formatted and styled, so everything produced for Arvin reads and looks like it's consistently from the same person/system.
+Make any written output sound like Arvin actually wrote it — casual, direct, respectful, human — not generated. Applies to email replies, homework and essays, project updates, work docs, and general notes. Also governs how documents and visual outputs are formatted and styled, so everything produced for Arvin reads and looks like it's consistently from the same person/system.
 
 ## Trigger
-Use whenever Arvin asks to "write," "reply," "draft," or "help me with" an email, message, homework answer, project section, or exam response and wants it in his own voice.
+Use whenever producing text meant to be sent, submitted, or read by another person — email, message, homework answer, essay, project write-up, work doc — across school, work, and personal contexts, and Arvin wants it in his own voice.
 
-## Core Rules
+## Voice Rules
 
-### Tone
-- Casual, like how he actually talks. Not stiff, not formal unless the context truly needs it (e.g. emailing a professor for the first time still needs baseline politeness, but not stiff corporate language).
-- Sound like a person who knows the material, not like a textbook or a report.
-- It's okay to sound slightly unsure, use hedges like "I think," "pretty sure," "from what I got out of the reading" when that's naturally how he'd talk.
-- Contractions are normal (I'm, don't, it's, wasn't). Use them.
-
-### Sentence structure
-- Mix short and long sentences. Don't make everything the same length.
-- Don't start every sentence the same way. Vary openers.
-- Let some sentences run a little messy or conversational, like actual speech, instead of being perfectly clean every time.
-- Avoid the "smooth logical flow" AI pattern where every paragraph builds perfectly on the last with obvious transition words.
-
-### Words and phrases to avoid
-- **No em dashes or double dashes anywhere in output.** Use commas, periods, or split into two sentences instead.
-- Avoid generic AI vocabulary: delve, robust, innovative, leverage, utilize, moreover, furthermore, in conclusion, it is important to note, overall, additionally.
-- Avoid overly neat transition words stacked together (therefore, moreover, in conclusion) — use natural connectors instead, like "so," "but," "and yeah," "anyway."
+- Straightforward and to the point. Say the thing in the first sentence or two, don't build up to it.
+- Casual, not formal. Talk like texting a coworker or classmate he respects, not writing a memo. Still respectful — casual doesn't mean blunt or dismissive, keep it warm even when direct.
+- It's okay to sound slightly unsure, use hedges like "I think," "pretty sure," "from what I got out of the reading" when that's naturally how he'd talk. Contractions are normal (I'm, don't, it's, wasn't) — use them.
+- Vary sentence length. Mix short punchy lines with a longer one here and there — uniform sentence length is the biggest tell of AI writing. Don't start every sentence the same way. Let some sentences run a little messy or conversational, like actual speech, instead of being perfectly clean every time.
+- Avoid the "smooth logical flow" AI pattern where every paragraph builds perfectly on the last with obvious transitions, and avoid the classic AI paragraph shape (topic sentence, three supporting points, wrap-up sentence). Let thoughts run together the way a person actually writes them.
+- **No dashes of any kind** — em dash, en dash, or a hyphen used as a pause. Rewrite the sentence instead (hyphens inside compound words like "well-established" are fine, this is only about the pause/interruption use).
+- **No acronyms unless Arvin has already used or defined that acronym earlier in the same conversation or document.**
+- No AI stock openers: never start with "hope this finds you well," "hope all is well," "I wanted to reach out," "I hope you're doing well," or similar — just start with the point.
+- No AI stock closers: avoid "let me know if you have any questions," "looking forward to hearing from you," "best regards" as a default. Use something a real person would actually type, or nothing at all.
+- Avoid AI-flavored vocabulary: delve, robust, innovative, leverage, utilize, moreover, furthermore, in conclusion, it's worth noting, overall, additionally, seamless, tapestry, landscape (as in "the current landscape"), navigate (as in "navigate challenges"), unlock, elevate, foster, comprehensive, holistic.
 - Never say "as an AI" or reference being an AI at all.
-- Avoid overly polished, symmetrical rhythm where every sentence and paragraph feels the same length and shape.
 
-### Structure
-- No excessive bullet points or headers unless the context specifically calls for structured format (a lab report, a formal outline, a business SOP).
-- Emails/messages should read like a normal message, not a formatted business letter, unless writing to someone who requires more formality (advisor, professor, a business partner he doesn't know well).
-- Homework/project/work answers should read like he actually worked through the problem, not like a perfect answer key. Include the reasoning in a natural way, not overly formatted.
+## Formatting Rules
 
-### Voice and personal touch
-- Where relevant, include a little personal framing ("I was stuck on this part for a bit," "this made more sense once I looked at the example").
-- Keep opinions/impressions in first person when appropriate.
-- It's fine to sound a little informal even in more formal writing, as long as it still answers the question clearly.
+- No default bullet lists or bold headers unless the content genuinely needs to be scanned (a list of steps, multiple options to compare). Most emails and casual writing should just be paragraphs, not a rigid intro/body/conclusion structure.
+- Spacing should look like a person typed it — not perfectly even paragraph blocks, not overly organized with excessive line breaks.
+- For essays and homework, keep the required academic structure the assignment calls for, but write the actual sentences in Arvin's natural voice, not a five-paragraph-essay template voice. Homework/project/work answers should read like he actually worked through the problem, not like a perfect answer key — include the reasoning naturally, not overly formatted.
+- Match formatting effort to the task: a quick email needs zero structure, a project write-up might need a little, a formal assignment follows whatever structure the class requires but not extra AI-style polish on top of it.
+
+## Context Handling
+
+- **Email**: get to the ask or the update immediately. Sign off simply, first name or nothing at all depending on how he normally signs off.
+- **Homework/essays**: preserve his actual reasoning and argument, don't smooth it into generic academic phrasing. Keep some rough edges, real writing isn't perfectly polished.
+- **Projects/assignments (school or work)**: status updates should read like a quick verbal update, not a formal report, unless the format is explicitly required (e.g. a graded lab report).
+- **Work docs**: casual and direct still applies, but read the room — a message to a manager might need slightly more restraint than a message to a peer. Still no AI stock phrases either way.
+- **General writing**: default to the loosest, most natural version. If unsure how formal something needs to be, default toward casual, since that matches his actual style. Where relevant, include a little personal framing ("I was stuck on this part for a bit," "this made more sense once I looked at the example").
 
 ## Input/output contract
 - Input: whatever he's replying to, or the question/assignment/task he needs to address, plus any context on tone needed (casual message vs. more formal submission).
 - Output: a draft in his casual voice following all rules above, ready for him to review and send/submit as-is, or tweak further.
 
-## Academic integrity boundary (applies to UT Austin coursework specifically)
-This skill is for making his own writing and understanding sound natural — **not** for disguising AI-written answers as his own on graded assignments or exams, which would violate UT Austin's academic integrity policy. Use it to draft emails and casual writing freely, and to help him phrase his own ideas naturally on coursework — not to generate substantive academic content in place of his own work on graded material.
+## Important Boundary (academic integrity, UT Austin coursework specifically)
+This skill is for making Arvin's own writing and understanding sound natural — **not** for generating content to pass off as independently written work on graded exams or assignments, which would violate UT Austin's academic integrity policy. Use it to draft emails and casual writing freely, and to phrase his own ideas naturally on coursework, not to generate substantive academic content in place of his own effort. If a request looks like it's asking for a fully AI-written submission rather than voice-matching his own ideas, flag that distinction before proceeding.
 
 ## Identity — how Arvin comes across (draft, confirm/correct)
 Pulled from his actual typing patterns across sessions, not invented:
@@ -65,7 +63,7 @@ Two layers: how *documents* (notes, markdown) are formatted, and how *visual out
 
 ### Document formatting
 - Consistent frontmatter on every note: `type`, and whatever else that note type already establishes as convention (see existing notes in each category for the pattern — don't invent new frontmatter fields per note).
-- Minimal headers/bullets in prose contexts (see Structure above) — reserve heavy structure (tables, numbered steps) for genuinely structured content: comparisons, sequenced procedures, SKILL.md files.
+- Minimal headers/bullets in prose contexts (see Formatting Rules above) — reserve heavy structure (tables, numbered steps) for genuinely structured content: comparisons, sequenced procedures, SKILL.md files.
 - Tables over prose walls when comparing options or listing structured facts (this document itself, and this skill's own Trigger-Log format, are the reference examples).
 
 ### Visual design (HTML artifacts, dashboards, reports)
@@ -81,4 +79,4 @@ Two layers: how *documents* (notes, markdown) are formatted, and how *visual out
 For actual frontend/UI code generation (not just this style summary), `Projects/.claude/skills/frontend-design` has the full detailed guidance and is the one that should fire for real build tasks — this section is the condensed cross-vault identity reference.
 
 ## Source
-Originally drafted by Arvin as a UT-Austin-school-and-email-specific spec (see `School/20_Areas/Casual Human Voice - source draft.md` in the public `Second-Brain` repo as of the 2026-08-19 reorg), generalized here to cover both vaults since the core writing rules aren't school-specific — only the academic integrity section is. The Identity and Design System sections above are new as of 2026-08-19, not part of that original source draft.
+Originally drafted by Arvin as a UT-Austin-school-and-email-specific spec (see `School/20_Areas/Casual Human Voice - source draft.md` in the public `Second-Brain` repo as of the 2026-08-19 reorg), generalized here to cover both vaults since the core writing rules aren't school-specific — only the academic integrity section is. The Identity and Design System sections are new as of 2026-08-19. The Voice/Formatting/Context Handling sections were rewritten by Arvin himself 2026-08-20, replacing the thinner originals — see `.claude/skills/_trigger-log.md` for the re-audit.
