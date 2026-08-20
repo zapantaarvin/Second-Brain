@@ -101,9 +101,20 @@ Ranked by recurrence × re-explaining cost:
 ***
 
 ## Candidates surfaced by 2026-08-19 research (not yet built, not yet ranked into §5)
-- **Monthly budget review co-pilot** (`Second-Brain-Personal`) — same proven pattern as `stock-portfolio`, applied to the numeric structure already in `Finance Dashboard.md`. Arvin passed on building this now (2026-08-19); revisit later.
-- **Zapee competitor price & reorder-decision check** (`Second-Brain`) — ties to Zapee's own blueprint's "weekly reorder rhythm." Build after Kanban status digest per the existing build order — more judgment variance than the narrow tasks proven so far.
-- **UT Austin semester deadline capture** (`Second-Brain`) — no deadline tracking exists across the 6 course notes. Arvin passed on building this now (2026-08-19); lower urgency, per-semester not weekly.
+- **Monthly budget review co-pilot** (`Second-Brain-Personal`) — same proven pattern as `stock-portfolio`, applied to the numeric structure already in `Finance Dashboard.md`. Arvin passed on building this now (2026-08-19); revisit later. Superseded 2026-08-20 by `finances-status-digest` below, which subsumes this idea into the generalized digest pattern.
+- **Zapee competitor price & reorder-decision check** (`Second-Brain`) — ties to Zapee's own blueprint's "weekly reorder rhythm." Build after Kanban status digest per the existing build order — more judgment variance than the narrow tasks proven so far. Still open.
+- **UT Austin semester deadline capture** (`Second-Brain`) — no deadline tracking exists across the 6 course notes. Arvin passed on building this now (2026-08-19); lower urgency, per-semester not weekly. Still open.
+
+## Roadmap decisions, 2026-08-20 (Perplexity round 2 + Claude synthesis)
+
+Arvin ran the updated research prompt (8-skill baseline) through Perplexity twice; both times only a summary of takeaways came back, not the full ranked tables. Rather than keep asking, Arvin delegated the actual roadmap planning to Claude, using Perplexity's specific ideas as input. Decided:
+
+1. ✅ **Build `finances-status-digest` first** (`Second-Brain-Personal/Finances/.claude/skills/`) — generalizes the status-digest pattern (same shape as `weekly-review-processor`) using data sources that already exist (`stock-portfolio`'s latest log + `Finance Dashboard.md`). Cheapest possible proof of the pattern, per Perplexity's own reasoning — also the one candidate that directly produces new dated vault content on every run, which closes the audit's biggest finding (zero content growth since the reorg) rather than adding more pure infrastructure.
+2. ✅ **Extend `grilling` for School** — a Socratic-tutor/concept-mastery mode, distinct from its existing plan-stress-test mode, added to the same skill rather than building a second bespoke Socratic-questioning skill per domain (explicitly flagged as a thing to avoid, this round).
+3. ✅ **Build `design-token-guardian`** (`Second-Brain/Projects/.claude/skills/`) — enforces the `frontend-design` tokens confirmed 2026-08-20, so future UI work can't silently drift from what was actually A/B tested and locked in.
+4. **Hold off**: a Business "decision-to-brief" pipeline (`grilling` → a `supplier-outreach-drafter` that doesn't exist yet) — both ventures are still pre-revenue, matches the existing "stay lightweight" finding for Business. Revisit once there's a real sourcing decision to run through it.
+
+Full checklist tracked in `docs/EXECUTION-PLAN.md`.
 
 ## Next Actions
 - [x] Move this note out of 00_Inbox into the appropriate Area/Project once reviewed
@@ -112,4 +123,7 @@ Ranked by recurrence × re-explaining cost:
 - [x] Create `.claude/skills/` folder in Business repo (Second-Brain) — done, holds `casual-human-voice` and `weekly-review-processor`
 - [x] Draft SKILL.md for weekly review processor
 - [x] Draft SKILL.md for casual human voice (added mid-stream, not in original Perplexity plan)
-- [ ] Test each built Skill's trigger actually fires on a natural phrase (per §3's own advice — haven't verified any of the four yet, only that the files exist)
+- [x] Test each built Skill's trigger actually fires on a natural phrase — done repeatedly via `auditing-skill-triggers`, see each repo's `.claude/skills/_trigger-log.md`
+- [ ] Build `finances-status-digest` (see 2026-08-20 decisions above)
+- [ ] Extend `grilling` for School concept-mastery mode
+- [ ] Build `design-token-guardian`
