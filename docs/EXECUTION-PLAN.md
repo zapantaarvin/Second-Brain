@@ -4,13 +4,13 @@
 
 ## Tier 1 — Claude executes now, no input needed
 
-- [ ] Fold the confirmed roadmap decisions (build `finances-status-digest` first, extend `grilling` for School, add `design-token-guardian`, hold off on the Business decision-to-brief pipeline) into `AI Brain Skills Strategy.md`
-- [ ] Build `finances-status-digest` (Second-Brain-Personal, nested under `Finances/.claude/skills/`) — pulls from `stock-portfolio`'s latest log + `Finance Dashboard.md`, produces a combined periodic status note
-- [ ] Extend `grilling` with a Socratic-tutor / concept-mastery mode for School use, distinct from its existing plan-stress-test mode
-- [ ] Build `design-token-guardian` (Second-Brain, nested under `Projects/.claude/skills/`) — checks UI code against the confirmed `frontend-design` tokens, flags drift
-- [ ] Run `auditing-skill-triggers` against the 3 new/changed skills, log results
-- [ ] Sync any cross-cutting changes via `sync-shared-skills.sh`
-- [ ] Update `STATUS.md` to reflect what's now built
+- [x] Fold the confirmed roadmap decisions into `AI Brain Skills Strategy.md` — done 2026-08-20
+- [x] Build `finances-status-digest` (Second-Brain-Personal, nested under `Finances/.claude/skills/`) — done 2026-08-20, pulls from `stock-portfolio`'s latest log + `Finance Dashboard.md`
+- [x] Extend `grilling` with Study Mode (concept-mastery) for School, alongside its existing Design-Tree Mode — done 2026-08-20, synced to both repos
+- [x] Build `design-token-guardian` (Second-Brain, nested under `Projects/.claude/skills/`) — done 2026-08-20, reads `frontend-design`'s tokens at check-time rather than hardcoding them
+- [x] Run `auditing-skill-triggers` against the 3 new/changed skills — done 2026-08-20, all pass, two soft ambiguities logged not fixed (low risk)
+- [x] Sync cross-cutting changes via `sync-shared-skills.sh` — confirmed `IN SYNC` for all 6 shared skills
+- [x] Update `STATUS.md` to reflect what's now built — done 2026-08-20 (see below)
 
 ## Tier 2 — needs Arvin specifically, Claude cannot do these
 
