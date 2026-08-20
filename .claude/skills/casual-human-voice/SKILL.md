@@ -69,13 +69,16 @@ Two layers: how *documents* (notes, markdown) are formatted, and how *visual out
 - Tables over prose walls when comparing options or listing structured facts (this document itself, and this skill's own Trigger-Log format, are the reference examples).
 
 ### Visual design (HTML artifacts, dashboards, reports)
-No confirmed brand palette exists yet — this is a **placeholder starting point**, swap for real preferences whenever Arvin has them (specific colors, a business's actual brand kit, etc.):
-- Direct, information-dense layouts over decorative ones — match the "no fluff" identity trait above. Favor clear hierarchy (one clear focal point, supporting detail secondary) over dense-but-flat data.
-- Neutral, restrained color use by default (per the `dataviz`/`artifact-design` skills' brand-neutral palette approach) rather than a loud/bright palette, until a real brand identity is defined.
-- Typography: clean, legible, minimal decorative fonts — this is a personal tool, not a marketing surface, unless the output is explicitly for a specific business's brand (which has its own guide and overrides this).
+**Confirmed 2026-08-20** via `reflecting-on-skills`, replacing the earlier neutral placeholder guess — see `Projects/.claude/skills/frontend-design/REFLECTIONS.md` for the full A/B test (a soft/pastel direction was built and explicitly rejected; this warm-neutral direction, based on a concrete reference site's actual CSS, was confirmed: "i like this better"):
+- **Warm-neutral, confident, editorial** — cream/beige ground (`#f5efe6`-family), near-black warm text, not pastel and not cold-corporate either. Confident geometric sans (Urbanist or similar) over both generic (Inter, Roboto) and rounded/playful (Quicksand, Fredoka) fonts.
+- Solid, deliberate color-blocking (one or two saturated accents used sparingly — e.g. vivid orange + cyan) rather than soft pastel tints or a loud/bright palette.
+- Restrained radius scale (small to moderate — roughly 6-24px, never blobby or pill-everything) and tight type (line-height ~1.1 titles / ~1.3 body, slight letter-spacing).
+- Motion, if any: smooth engineered easing (GSAP-style power curves), not bouncy/spring/wiggle.
+- **Commit to a single light theme — don't auto-build a `prefers-color-scheme: dark` variant.** An improvised dark-mode guess already caused a real false-negative reaction once (Arvin's system runs dark, so an untested dark palette rendered first and got disliked before the actual design was even seen). Only build dark mode if a request explicitly asks for it.
+- Direct, information-dense layouts over decorative ones still holds — favor clear hierarchy (one focal point, supporting detail secondary) over dense-but-flat data, matching the "no fluff" identity trait above.
 - Any dashboard/report output should be scannable in seconds — matches the "distill, don't dump" vault convention applied to visual output instead of text.
 
-**To make this real** (not just a placeholder): Arvin should supply actual preferences — specific colors, fonts, an existing brand kit from one of his businesses, or example designs he likes — and this section gets rewritten from that, not left as an inferred default.
+For actual frontend/UI code generation (not just this style summary), `Projects/.claude/skills/frontend-design` has the full detailed guidance and is the one that should fire for real build tasks — this section is the condensed cross-vault identity reference.
 
 ## Source
 Originally drafted by Arvin as a UT-Austin-school-and-email-specific spec (see `School/20_Areas/Casual Human Voice - source draft.md` in the public `Second-Brain` repo as of the 2026-08-19 reorg), generalized here to cover both vaults since the core writing rules aren't school-specific — only the academic integrity section is. The Identity and Design System sections above are new as of 2026-08-19, not part of that original source draft.
