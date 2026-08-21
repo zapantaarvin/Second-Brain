@@ -17,7 +17,7 @@
 
 ## Tier 2 — needs Arvin specifically, Claude cannot do these
 
-- [x] **`Second-Brain-Personal` MCP wiring** — done 2026-08-20. Arvin reopened the vault in Obsidian, plugin generated its key, Claude wrote `.mcp.json` from it (confirmed gitignored via `git check-ignore`). Worth a real check next session against this repo (e.g. ask Claude to read a note via MCP) rather than just assuming it works.
+- [ ] **`Second-Brain-Personal` MCP wiring — config written, connection not actually working.** Reopened 2026-08-20: the plugin generated a key and `.mcp.json` was written correctly (gitignored, confirmed), but the live MCP connection doesn't work — reported by Arvin, not yet diagnosed (Obsidian running at the time? port 27125 actually listening? something else). Deprioritized per Arvin — revisit later, don't treat the file existing as proof it works.
 - [ ] **Run `/plugin install skill-creator@anthropic-agent-skills`.** Steps: (1) open an interactive Claude Code session (terminal, not this one), (2) type that exact command at the prompt, (3) confirm any install prompt it shows.
 - [ ] **Decide whether to push either repo to GitHub.** Not an instruction, a decision — tell me yes/no per repo and I'll handle the actual `git push`.
 - [ ] **Capture something real into `00_Inbox`.** Steps: (1) open Obsidian on whichever vault fits (public `Second-Brain` for business/school/general, private `Second-Brain-Personal` for personal/finance), (2) create a new note anywhere inside that vault's `00_Inbox/` folder, (3) write whatever's on your mind, no formatting or categorizing needed at capture time, (4) next time you ask for a weekly review, I'll help sort it from there.
