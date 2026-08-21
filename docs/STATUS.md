@@ -54,11 +54,12 @@ All 6 shared skills confirmed `IN SYNC` via `sync-shared-skills.sh` as of this a
 ## 4. Still outstanding (needs something from Arvin, not just from Claude)
 
 1. **`Second-Brain-Personal` MCP connection** — config is correct but the connection doesn't actually work; deprioritized 2026-08-20 per Arvin, not diagnosed yet.
-2. **`skill-creator` plugin** — needs `/plugin install skill-creator@anthropic-agent-skills` run in an interactive session; can't be done headlessly.
-3. **GitHub push** — every commit in both repos is local-only. Not a bug (never asked for), but a real backup gap worth a decision.
-4. **Actual content capture** — the zero-growth problem in §2. `finances-status-digest` exists now and would produce a real dated note every time it runs, but like `weekly-review-processor` it's built and never actually executed yet. Building a skill isn't the same as using it.
+2. **GitHub push** — every commit in both repos is local-only. Not a bug (never asked for), but a real backup gap worth a decision.
+3. **Actual content capture** — the zero-growth problem in §2. `finances-status-digest` exists now and would produce a real dated note every time it runs, but like `weekly-review-processor` it's built and never actually executed yet. Building a skill isn't the same as using it.
 
 **Resolved 2026-08-20**: the Perplexity roadmap loop (asked for 3 times, never pasted in full) — Arvin delegated roadmap planning to Claude instead of continuing to chase it.
+
+**Deferred to Tier 3, 2026-08-20**: `skill-creator` install. Real source found and reviewed (`github.com/anthropics/skills`, official, legitimate) — see `docs/EXECUTION-PLAN.md` for the full reasoning. Not blocked, just not worth the Python-dependency step yet.
 
 **Reopened 2026-08-20**: `Second-Brain-Personal` MCP wiring — config written correctly but the live connection doesn't work. Back on the outstanding list above; deprioritized per Arvin, not dropped.
 
