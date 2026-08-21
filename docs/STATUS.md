@@ -10,7 +10,7 @@
 |---|---|---|
 | 1. Vault scaffold | ✅ Done | Restructured category-first 2026-08-19 (see §2) |
 | 2. CLAUDE.md v1 | ✅ Done | Root + 6 category files, all under line-count guidance |
-| 3. Obsidian MCP wiring | 🟡 Half done | `Second-Brain` works. `Second-Brain-Personal` has been stuck for multiple days — plugin staged, port set, but never opened in Obsidian to generate its key. **The single most-repeated unfinished action in this whole project.** |
+| 3. Obsidian MCP wiring | ✅ Done | Both vaults wired. `Second-Brain-Personal` unblocked 2026-08-20 — the single most-repeated unfinished action in this project, finally closed. |
 | 4. Static hybrid RAG | ⬜ Not started | Deliberately deprioritized — see §5 |
 | 5. Reranker | ⬜ Not started | Depends on 4 |
 | 6. Agentic RAG escalation | ⬜ Not started | Depends on 4/5 |
@@ -53,12 +53,11 @@ All 6 shared skills confirmed `IN SYNC` via `sync-shared-skills.sh` as of this a
 
 ## 4. Still outstanding (needs something from Arvin, not just from Claude)
 
-1. **`Second-Brain-Personal` MCP wiring** — open/reload that vault in Obsidian once. Still the single most-repeated unfinished item in this project.
-2. **`skill-creator` plugin** — needs `/plugin install skill-creator@anthropic-agent-skills` run in an interactive session; can't be done headlessly.
-3. **GitHub push** — every commit in both repos is local-only. Not a bug (never asked for), but a real backup gap worth a decision.
-4. **Actual content capture** — the zero-growth problem in §2. `finances-status-digest` exists now and would produce a real dated note every time it runs, but like `weekly-review-processor` it's built and never actually executed yet. Building a skill isn't the same as using it.
+1. **`skill-creator` plugin** — needs `/plugin install skill-creator@anthropic-agent-skills` run in an interactive session; can't be done headlessly.
+2. **GitHub push** — every commit in both repos is local-only. Not a bug (never asked for), but a real backup gap worth a decision.
+3. **Actual content capture** — the zero-growth problem in §2. `finances-status-digest` exists now and would produce a real dated note every time it runs, but like `weekly-review-processor` it's built and never actually executed yet. Building a skill isn't the same as using it.
 
-**Resolved 2026-08-20**: the Perplexity roadmap loop (asked for 3 times, never pasted in full) — Arvin delegated roadmap planning to Claude instead of continuing to chase it. See `AI Brain Skills Strategy.md`'s "Roadmap decisions, 2026-08-20" section and `docs/EXECUTION-PLAN.md`.
+**Resolved 2026-08-20**: the Perplexity roadmap loop (asked for 3 times, never pasted in full) — Arvin delegated roadmap planning to Claude instead of continuing to chase it. **Also resolved 2026-08-20**: `Second-Brain-Personal` MCP wiring — Arvin opened the vault in Obsidian, key generated, `.mcp.json` written.
 
 ---
 
