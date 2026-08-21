@@ -6,4 +6,4 @@ status: pending
 
 # Work on UT Austin machine learning class
 
-Pending — relates to [[DSC 391L - Machine Learning]] in `School/30_Resources/UT-Austin/`. No further detail given yet; flesh out at next review (what specifically: an assignment, studying for an exam, a concept to nail down — `grilling`'s Study Mode is built for that last one once it's clearer).
+Relates to [[DSC 391L - Machine Learning]] in `School/30_Resources/UT-Austin/`. Confirmed 2026-08-20: it's an assignment. Per the `zapantaarvin/UT-Austin` repo (checked live): HW0 already has a solved notebook (`hw0_programming_solution.ipynb`); HW1 only has handouts (`hw1_theory_handout.pdf`, `hw1_programming_handout.pdf`), no solution yet — likely HW1, awaiting confirmation.
