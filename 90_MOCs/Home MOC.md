@@ -13,7 +13,7 @@ Category-first as of 2026-08-19 — see `CLAUDE.md`'s category map for what belo
 
 ## School
 - [[_index|UT-Austin Coursework]] — 7 courses, reference notes only (full files stay in the private UT-Austin repo)
-- [[Casual Human Voice - source draft]] — original UT Austin voice spec the `casual-human-voice` Skill was built from
+- [[Casual Human Voice - source draft]] — original UT Austin voice spec the `casual-human-voice` Skill was built from (archived 2026-08-21 — superseded by the Skill itself, kept as historical source)
 
 ## Projects (app building)
 - [[Kanban Business Hub]]
